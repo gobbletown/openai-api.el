@@ -19,4 +19,4 @@ Running this does several things:
  there are many jobs in the queue or your dataset is large)"
   (cmd "openai" "api" "fine_tunes.create" "-t" train-file-id-or-path "-m" base-model))
 
-(provide 'my-openai-api)
+(provide 'openai-api)
