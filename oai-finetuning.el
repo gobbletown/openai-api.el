@@ -19,9 +19,9 @@ the process of suggested changes."
           ((listp prompt-completion-tuples)
            (make-temp-file
             "oai-ft-" nil txt
-            (lines2str
+            (list2str
              (loop for tp in prompt-completion-tuples collect (json-encode-alist tp))))))))
-    (etv (pps prompt-completion-tuples)))
+    (find-file fp))
   ;; (cmd "openai" "tools" "fine_tunes.prepare_data" "-f" prompt-completion-tuples)
   )
 
