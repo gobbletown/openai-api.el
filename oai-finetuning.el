@@ -15,15 +15,16 @@ will save the output into a JSONL file ready for fine-tuning, after guiding you 
 the process of suggested changes."
   (let ((fp
          (cond
-          ((f-file-p prompt-completion-tuples) prompt-completion-tuples)
+          ((and
+            (stringp prompt-completion-tuples)
+            (f-file-p prompt-completion-tuples)) prompt-completion-tuples)
           ((listp prompt-completion-tuples)
            (make-temp-file
-            "oai-ft-" nil txt
+            "oai-ft-" nil "txt"
             (list2str
              (loop for tp in prompt-completion-tuples collect (json-encode-alist tp))))))))
-    (find-file fp))
-  ;; (cmd "openai" "tools" "fine_tunes.prepare_data" "-f" prompt-completion-tuples)
-  )
+    ;; (find-file fp)
+    (cmd "openai" "tools" "fine_tunes.prepare_data" "-f" prompt-completion-tuples)))
 
 (openai-prepare-data oai-ft-training-data-testset)
 
