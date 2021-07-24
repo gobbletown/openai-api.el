@@ -1,3 +1,5 @@
+(require 'openai-api)
+
 (defun openai-prepare-data (fp)
   "This tool accepts different formats, with the only requirement that they contain a prompt
 and a completion column/key. You can pass a CSV, TSV, XLSX, JSON or JSONL file, and it
