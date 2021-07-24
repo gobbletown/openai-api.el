@@ -1,9 +1,15 @@
-(defun openai-prepare-data (fp)
+;; (json-encode-list '(("prompt" "completion") ("prompt2" "completion")))
+;; (json-encode-list '(("prompt" . "once upon a time") ("completion" "once upon a time there was a frog")))
+
+(defun openai-prepare-data (prompt-completion-tuples)
   "This tool accepts different formats, with the only requirement that they contain a prompt
 and a completion column/key. You can pass a CSV, TSV, XLSX, JSON or JSONL file, and it
 will save the output into a JSONL file ready for fine-tuning, after guiding you through
 the process of suggested changes."
-  (cmd "openai" "tools" "fine_tunes.prepare_data" "-f" fp))
+  (cond
+   ((f-file-p prompt-completion-tuples) prompt-completion-tuples)
+   ((listp prompt-completion-tuples) prompt-completion-tuples))
+  (cmd "openai" "tools" "fine_tunes.prepare_data" "-f" prompt-completion-tuples))
 
 
 (defun openai-fine-tune-prepare (train-file-id-or-path base-model)
