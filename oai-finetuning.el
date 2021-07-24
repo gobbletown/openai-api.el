@@ -26,7 +26,8 @@ the process of suggested changes."
     ;; (find-file fp)
     (snc (cmd "myopenai" "tools" "fine_tunes.prepare_data" "-f" prompt-completion-tuples))))
 
-(openai-prepare-data oai-ft-training-data-testset)
+(comment
+ (openai-prepare-data oai-ft-training-data-testset))
 
 (defun openai-fine-tune-prepare (train-file-id-or-path base-model)
   "Where BASE_MODEL is the name of the base model you're starting from (ada, babbage, or
