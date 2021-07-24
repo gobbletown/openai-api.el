@@ -1,5 +1,8 @@
 ;; (json-encode-list '(("prompt" "completion") ("prompt2" "completion")))
+;; The question is: are completions coming quick extend beyond completion and is more like transformation?
+;; This is what the prompt should encode anyway.
 ;; (json-encode-list '(("prompt" . "once upon a time") ("completion" "once upon a time there was a frog")))
+;; (json-encode-list '(("prompt" . "once upon a time") ("completion" "there was a frog")))
 
 (defun openai-prepare-data (prompt-completion-tuples)
   "This tool accepts different formats, with the only requirement that they contain a prompt
