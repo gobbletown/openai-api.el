@@ -1,6 +1,6 @@
 ;; (json-encode-list '(("prompt" "completion") ("prompt2" "completion")))
 ;; The question is: are completions coming quick extend beyond completion and is more like transformation?
-;; This is what the prompt should encode anyway.
+;; This is what the prompt should encode anyway, so I'll do that.
 ;; (json-encode-list '(("prompt" . "once upon a time") ("completion" "once upon a time there was a frog")))
 ;; (json-encode-list '(("prompt" . "once upon a time") ("completion" "there was a frog")))
 
