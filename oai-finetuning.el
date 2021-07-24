@@ -1,4 +1,4 @@
-(require 'openai-api)
+;; (require 'openai-api)
 
 (defun openai-prepare-data (fp)
   "This tool accepts different formats, with the only requirement that they contain a prompt
