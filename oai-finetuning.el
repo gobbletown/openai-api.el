@@ -2,18 +2,30 @@
 ;; The question is: are completions coming quick extend beyond completion and is more like transformation?
 ;; This is what the prompt should encode anyway, so I'll do that.
 ;; (json-encode-list '(("prompt" . "once upon a time") ("completion" "once upon a time there was a frog")))
-;; (json-encode-list '(("prompt" . "once upon a time") ("completion" "there was a frog")))
+;; (json-encode-list '(("prompt" . "once upon a time") ("completion" . "there was a frog")))
+
+(defset oai-ft-training-data-testset
+  '((("prompt" . "once upon a time") ("completion" . "there was a frog"))
+    (("prompt" . "about a") ("completion" . "frog"))))
 
 (defun openai-prepare-data (prompt-completion-tuples)
   "This tool accepts different formats, with the only requirement that they contain a prompt
 and a completion column/key. You can pass a CSV, TSV, XLSX, JSON or JSONL file, and it
 will save the output into a JSONL file ready for fine-tuning, after guiding you through
 the process of suggested changes."
-  (cond
-   ((f-file-p prompt-completion-tuples) prompt-completion-tuples)
-   ((listp prompt-completion-tuples) prompt-completion-tuples))
-  (cmd "openai" "tools" "fine_tunes.prepare_data" "-f" prompt-completion-tuples))
+  (let ((fp
+         (cond
+          ((f-file-p prompt-completion-tuples) prompt-completion-tuples)
+          ((listp prompt-completion-tuples)
+           (make-temp-file
+            "oai-ft-" nil txt
+            (lines2str
+             (loop for tp in prompt-completion-tuples collect (json-encode-alist tp))))))))
+    (etv (pps prompt-completion-tuples)))
+  ;; (cmd "openai" "tools" "fine_tunes.prepare_data" "-f" prompt-completion-tuples)
+  )
 
+(openai-prepare-data oai-ft-training-data-testset)
 
 (defun openai-fine-tune-prepare (train-file-id-or-path base-model)
   "Where BASE_MODEL is the name of the base model you're starting from (ada, babbage, or
