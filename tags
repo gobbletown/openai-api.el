@@ -5,5 +5,9 @@
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	0.0.0	/d5bcb52b/
+oai-ft-engines	oai-finetuning.el	/^(defset oai-ft-engines$/;"	f
+oai-ft-training-data-testset	oai-finetuning.el	/^(defset oai-ft-training-data-testset$/;"	f
+openai-fine-tune-prepare	oai-finetuning.el	/^(defun openai-fine-tune-prepare (train-file-id-or-path base-model)$/;"	f
 openai-fine-tune-prepare	openai-api.el	/^(defun openai-fine-tune-prepare (train-file-id-or-path base-model)$/;"	f
+openai-prepare-data	oai-finetuning.el	/^(defun openai-prepare-data (prompt-completion-tuples)$/;"	f
 openai-prepare-data	openai-api.el	/^(defun openai-prepare-data (fp)$/;"	f

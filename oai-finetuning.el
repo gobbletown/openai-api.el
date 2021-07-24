@@ -4,6 +4,9 @@
 ;; (json-encode-list '(("prompt" . "once upon a time") ("completion" "once upon a time there was a frog")))
 ;; (json-encode-list '(("prompt" . "once upon a time") ("completion" . "there was a frog")))
 
+(defset oai-ft-engines
+  '("ada" "babbage" "curie"))
+
 (defset oai-ft-training-data-testset
   '((("prompt" . "once upon a time") ("completion" . "there was a frog"))
     (("prompt" . "about a") ("completion" . "frog"))))
