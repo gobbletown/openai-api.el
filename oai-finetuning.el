@@ -53,7 +53,7 @@ Running this does several things:
  there are many jobs in the queue or your dataset is large)"
   (cmd "openai" "api" "fine_tunes.create" "-t" train-file-id-or-path "-m" base-model))
 
-(defun oai-list-fine-tunes-json ()
+(defun oai-ft-list-json ()
   (pen-snc "pen-openai api fine_tunes.list"))
 
 (defun oai-ft-job-state (job-id)
