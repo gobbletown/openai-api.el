@@ -56,4 +56,7 @@ Running this does several things:
 (defun oai-list-fine-tunes-json ()
   (pen-snc "pen-openai api fine_tunes.list"))
 
+(defun oai-ft-get-job-state ()
+  (pen-snc (cmd "openai" "api" "fine_tunes.get" "-i" job-id)))
+
 (provide 'oai-finetuning)
