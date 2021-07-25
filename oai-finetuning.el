@@ -16,6 +16,7 @@
   '((("prompt" . "once upon a time") ("completion" . "there was a frog"))
     (("prompt" . "about a") ("completion" . "frog"))))
 
+;; TODO Run this and collect the output
 (defun openai-prepare-data (prompt-completion-tuples)
   "This tool accepts different formats, with the only requirement that they contain a prompt
 and a completion column/key. You can pass a CSV, TSV, XLSX, JSON or JSONL file, and it
