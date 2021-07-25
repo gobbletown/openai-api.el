@@ -33,7 +33,8 @@ the process of suggested changes."
             (list2str
              (loop for tp in prompt-completion-tuples collect (json-encode-alist tp))))))))
     ;; (find-file fp)
-    (snc (cmd "myopenai" "tools" "fine_tunes.prepare_data" "-f" prompt-completion-tuples))))
+    ;; (snc (cmd "myopenai" "tools" "fine_tunes.prepare_data" "-f" prompt-completion-tuples))
+    (etv (cmd "myopenai" "tools" "fine_tunes.prepare_data" "-f" prompt-completion-tuples))))
 
 (comment
  (openai-prepare-data oai-ft-training-data-testset))
