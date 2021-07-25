@@ -1,3 +1,5 @@
+;; https://beta.openai.com/docs/api-reference/fine-tunes/
+
 ;; Steps
 ;; 1 Prepare and upload training data
 ;; 2 Train a new fine-tuned model
