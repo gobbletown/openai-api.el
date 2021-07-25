@@ -9,8 +9,9 @@
 ;; (json-encode-list '(("prompt" . "once upon a time") ("completion" "once upon a time there was a frog")))
 ;; (json-encode-list '(("prompt" . "once upon a time") ("completion" . "there was a frog")))
 
+;; davinci and codex require special access
 (defset oai-ft-engines
-  '("ada" "babbage" "curie" "davinci"))
+  '("ada" "babbage" "curie" "davinci" "codex"))
 
 (defset oai-ft-training-data-testset
   '((("prompt" . "once upon a time") ("completion" . "there was a frog"))
