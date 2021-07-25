@@ -1,3 +1,5 @@
+(require oai-engines)
+
 ;; https://beta.openai.com/docs/api-reference/fine-tunes/
 
 ;; Steps
