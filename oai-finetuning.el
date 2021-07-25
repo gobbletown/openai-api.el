@@ -51,15 +51,15 @@ Running this does several things:
 2 Creates a fine-tune job
 3 Streams events until the job is done (this often takes minutes, but can take hours if
  there are many jobs in the queue or your dataset is large)"
-  (cmd "openai" "api" "fine_tunes.create" "-t" train-file-id-or-path "-m" base-model))
+  (cmd "pen-openai" "api" "fine_tunes.create" "-t" train-file-id-or-path "-m" base-model))
 
 (defun oai-ft-list-json ()
   (pen-snc "pen-openai api fine_tunes.list"))
 
 (defun oai-ft-job-state (job-id)
-  (pen-snc (cmd "openai" "api" "fine_tunes.get" "-i" job-id)))
+  (pen-snc (cmd "pen-openai" "api" "fine_tunes.get" "-i" job-id)))
 
 (defun oai-ft-job-cancel (job-id)
-  (pen-snc (cmd "openai" "api" "fine_tunes.cancel" "-i" job-id)))
+  (pen-snc (cmd "pen-openai" "api" "fine_tunes.cancel" "-i" job-id)))
 
 (provide 'oai-finetuning)
