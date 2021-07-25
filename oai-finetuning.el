@@ -1,3 +1,8 @@
+;; Steps
+;; 1 Prepare and upload training data
+;; 2 Train a new fine-tuned model
+;; 3 Use your fine-tuned model
+
 ;; (json-encode-list '(("prompt" "completion") ("prompt2" "completion")))
 ;; The question is: are completions coming quick extend beyond completion and is more like transformation?
 ;; This is what the prompt should encode anyway, so I'll do that.
