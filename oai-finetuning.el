@@ -34,7 +34,7 @@ the process of suggested changes."
             (list2str
              (loop for tp in prompt-completion-tuples collect (json-encode-alist tp))))))))
     ;; (find-file fp)
-    ;; (snc (cmd "pen-openai" "tools" "fine_tunes.prepare_data" "-f" prompt-completion-tuples))
+    ;; (pen-snc (cmd "pen-openai" "tools" "fine_tunes.prepare_data" "-f" prompt-completion-tuples))
     (etv (cmd "pen-openai" "tools" "fine_tunes.prepare_data" "-f" fp))))
 
 (comment
@@ -54,6 +54,6 @@ Running this does several things:
   (cmd "openai" "api" "fine_tunes.create" "-t" train-file-id-or-path "-m" base-model))
 
 (defun oai-list-fine-tunes-json ()
-  (snc "pen-openai api fine_tunes.list"))
+  (pen-snc "pen-openai api fine_tunes.list"))
 
 (provide 'oai-finetuning)
