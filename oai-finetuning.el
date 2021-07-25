@@ -59,7 +59,7 @@ Running this does several things:
 (defun oai-ft-job-state (job-id)
   (pen-snc (cmd "openai" "api" "fine_tunes.get" "-i" job-id)))
 
-(defun oai-ft-job-cancel ()
+(defun oai-ft-job-cancel (job-id)
   (pen-snc (cmd "openai" "api" "fine_tunes.cancel" "-i" job-id)))
 
 (provide 'oai-finetuning)
