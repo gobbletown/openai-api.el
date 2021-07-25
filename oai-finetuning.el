@@ -10,7 +10,7 @@
 ;; (json-encode-list '(("prompt" . "once upon a time") ("completion" . "there was a frog")))
 
 (defset oai-ft-engines
-  '("ada" "babbage" "curie"))
+  '("ada" "babbage" "curie" "davinci"))
 
 (defset oai-ft-training-data-testset
   '((("prompt" . "once upon a time") ("completion" . "there was a frog"))
@@ -34,7 +34,7 @@ the process of suggested changes."
              (loop for tp in prompt-completion-tuples collect (json-encode-alist tp))))))))
     ;; (find-file fp)
     ;; (snc (cmd "myopenai" "tools" "fine_tunes.prepare_data" "-f" prompt-completion-tuples))
-    (etv (cmd "myopenai" "tools" "fine_tunes.prepare_data" "-f" prompt-completion-tuples))))
+    (etv (cmd "myopenai" "tools" "fine_tunes.prepare_data" "-f" fp))))
 
 (comment
  (openai-prepare-data oai-ft-training-data-testset))
