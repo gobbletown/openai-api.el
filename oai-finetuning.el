@@ -1,4 +1,4 @@
-(require oai-engines)
+(require 'oai-engines)
 
 ;; https://beta.openai.com/docs/api-reference/fine-tunes/
 

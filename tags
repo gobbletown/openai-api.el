@@ -6,6 +6,10 @@
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	0.0.0	/d5bcb52b/
 oai-ft-engines	oai-finetuning.el	/^(defset oai-ft-engines$/;"	f
+oai-ft-job-cancel	oai-finetuning.el	/^(defun oai-ft-job-cancel (job-id)$/;"	f
+oai-ft-job-events	oai-finetuning.el	/^(defun oai-ft-job-events (job-id)$/;"	f
+oai-ft-job-state	oai-finetuning.el	/^(defun oai-ft-job-state (job-id)$/;"	f
+oai-ft-list-json	oai-finetuning.el	/^(defun oai-ft-list-json ()$/;"	f
 oai-ft-training-data-testset	oai-finetuning.el	/^(defset oai-ft-training-data-testset$/;"	f
 openai-fine-tune-prepare	oai-finetuning.el	/^(defun openai-fine-tune-prepare (train-file-id-or-path base-model)$/;"	f
 openai-prepare-data	oai-finetuning.el	/^(defun openai-prepare-data (prompt-completion-tuples)$/;"	f
