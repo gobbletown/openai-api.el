@@ -3,7 +3,7 @@
 
 (require 'oai-engines)
 
-;; TODO Implement streams
+;; TODO Implement streaming completions
 ;; https://www.gnu.org/software/emacs/manual/html_node/elisp/Input-Streams.html
 
 (provide 'oai-completions)
