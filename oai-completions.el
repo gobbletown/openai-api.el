@@ -7,6 +7,6 @@
 ;; https://www.gnu.org/software/emacs/manual/html_node/elisp/Input-Streams.html
 
 ;; Open a process buffer and then do a similar thing to comint
-;; Or perhaps I should simply use one comint per language model 
+;; Or perhaps I should simply use one comint per language model
 
 (provide 'oai-completions)
