@@ -9,4 +9,6 @@
 ;; Open a process buffer and then do a similar thing to comint
 ;; Or perhaps I should simply use one comint per language model
 
+;; I would then read everything through comint
+
 (provide 'oai-completions)
