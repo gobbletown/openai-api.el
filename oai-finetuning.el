@@ -14,10 +14,11 @@
 ;; (json-encode-list '(("prompt" . "once upon a time") ("completion" . "there was a frog")))
 
 ;; davinci and codex require special access
-(defset oai-ft-engines
+;; defset not available
+(defvar oai-ft-engines
   '("ada" "babbage" "curie" "davinci" "codex"))
 
-(defset oai-ft-training-data-testset
+(defvar oai-ft-training-data-testset
   '((("prompt" . "once upon a time") ("completion" . "there was a frog"))
     (("prompt" . "about a") ("completion" . "frog"))))
 
