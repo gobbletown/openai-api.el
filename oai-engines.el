@@ -7,6 +7,6 @@
     (if (interactive-p)
         (etv (pen-list2str engines))
       engines)))
-(memoize 'pen-openai-list-engines)
+;; (memoize 'pen-openai-list-engines)
 
 (provide 'oai-engines)
