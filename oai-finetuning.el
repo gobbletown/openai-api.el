@@ -42,6 +42,8 @@ the process of suggested changes."
     ;; (pen-snc (cmd "pen-openai" "tools" "fine_tunes.prepare_data" "-f" prompt-completion-tuples))
     (etv (cmd "pen-openai" "tools" "fine_tunes.prepare_data" "-f" fp))))
 
+(defmacro comment (&rest body) nil)
+
 (comment
  (openai-prepare-data oai-ft-training-data-testset))
 
